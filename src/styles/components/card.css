@@ -1,0 +1,88 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Accent stripe — har card ka colour --accent se aata hai */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--accent, var(--violet));
+}
+
+/* Pointer follow glow */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in srgb, var(--accent, var(--violet)) 20%, transparent),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.card:hover::after {
+  opacity: 1;
+}
+
+.card__title {
+  font-size: var(--step-1);
+}
+.card__desc {
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.card__points {
+  display: grid;
+  gap: 0.5rem;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.card__points li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.card__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent, var(--violet));
+}
+
+.card__tags {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: var(--step--1);
+  padding-top: 0.5rem;
+}
+.card__links a {
+  color: var(--accent, var(--cyan));
+  border-bottom: 1px solid transparent;
+}
+.card__links a:hover {
+  border-bottom-color: currentColor;
+}

@@ -1,0 +1,25 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cyan);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.25s ease, width 0.25s ease, height 0.25s ease;
+}
+.cursor.is-hover {
+  background: var(--cyan);
+  width: 34px;
+  height: 34px;
+}
+
+@media (hover: none), (max-width: 720px) {
+  .cursor {
+    display: none;
+  }
+}

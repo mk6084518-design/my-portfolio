@@ -1,0 +1,18 @@
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.1rem;
+}
+
+.skill-group {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border-top: 3px solid var(--accent, var(--violet));
+}
+
+.skill-group h3 {
+  font-size: var(--step-1);
+  margin-bottom: 0.9rem;
+}

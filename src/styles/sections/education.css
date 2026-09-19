@@ -1,0 +1,42 @@
+.education__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.education__item {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.education__period {
+  font-size: var(--step--1);
+  color: var(--cyan);
+}
+
+.education__item h3 {
+  font-size: var(--step-1);
+  margin-bottom: 0.3rem;
+}
+
+.education__note {
+  margin-top: 0.4rem;
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  .education__item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,42 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--step--1);
+  cursor: pointer;
+  will-change: transform;
+}
+
+.btn--primary {
+  background: var(--grad-primary);
+  color: #0b0b12;
+  box-shadow: var(--glow);
+}
+.btn--primary[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.btn--ghost {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--text);
+}
+.btn--ghost:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+@media (max-width: 420px) {
+  .btn {
+    width: 100%;
+  }
+  .hero__cta .magnetic,
+  .contact__form .magnetic {
+    width: 100%;
+  }
+}

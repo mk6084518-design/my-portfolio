@@ -1,0 +1,90 @@
+.about__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: clamp(1.75rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.about__body {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.about__lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+.about__lists h3 {
+  font-size: var(--step-0);
+  margin-bottom: 0.6rem;
+}
+
+.about__languages {
+  display: grid;
+  gap: 0.35rem;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.about__languages strong {
+  color: var(--text);
+}
+
+/* ---- Profile image section ---- */
+.profile-card {
+  position: relative;
+  padding: 10px;
+  border-radius: calc(var(--radius) + 8px);
+  background: var(--grad-primary);
+  box-shadow: var(--glow);
+}
+
+.profile-card__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.profile-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__fallback {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 12vw, 5rem);
+  letter-spacing: 0.05em;
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.profile-card__meta {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.9rem 0.4rem 0.3rem;
+  color: #0b0b12;
+  font-size: var(--step--1);
+}
+.profile-card__meta strong {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+}
+.profile-card__location {
+  opacity: 0.75;
+}
+
+@media (max-width: 860px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+  .profile-card {
+    max-width: 380px;
+    margin-inline: auto;
+  }
+}

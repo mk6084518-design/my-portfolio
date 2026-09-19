@@ -1,0 +1,42 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.9rem;
+  background: var(--bg);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.preloader__name {
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.preloader__count {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  font-variant-numeric: tabular-nums;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.preloader__bar {
+  display: block;
+  width: min(70vw, 280px);
+  height: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.preloader__bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--grad-accent);
+}
