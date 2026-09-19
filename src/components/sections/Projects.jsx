@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className="projects section" id="projects">
       <div className="container">
-        <SectionTitle kicker="Selected work">Projects</SectionTitle>
+        <SectionTitle>Projects</SectionTitle>
 
         <div className="projects__grid">
           {projects.map((project) => (

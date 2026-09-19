@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section className="skills section" id="skills">
       <div className="container">
-        <SectionTitle kicker="Toolkit">Technical skills</SectionTitle>
+        <SectionTitle>Technical skills</SectionTitle>
 
         <Reveal className="skills__groups" stagger>
           {skillGroups.map((group) => (

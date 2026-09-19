@@ -11,8 +11,8 @@ export const site = {
     "I focus on frontend architecture, global state management, and secure authentication workflows using JWT-based authentication, MVC patterns, and REST APIs.",
     "I enjoy turning AI models such as Google Gemini into useful product experiences by designing flows that deliver meaningful results, not just API responses.",
   ],
-  profileImage: "/images/profile.jpg",
-  resume: "/resume/Manoj_Kumar_Resume.pdf",
+  profileImage: "/images/my-photo.jpg",
+  resume: "https://drive.google.com/file/d/15mcKPrlp8RJAO8KVNR5lcO3PSzXAhTlt/view?usp=drive_link",
   email: "mk6084518@gmail.com",
   phone: "+91 8006457447",
   socials: [

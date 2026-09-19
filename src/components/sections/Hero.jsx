@@ -62,8 +62,8 @@ export default function Hero({ start }) {
 
         <div className="hero__cta">
           <Button href="#projects">See my work</Button>
-          <Button href={site.resume} variant="ghost" download>
-            Download resume
+          <Button href={site.resume} variant="ghost" target="_blank" rel="noopener noreferrer">
+            View resume
           </Button>
         </div>
 

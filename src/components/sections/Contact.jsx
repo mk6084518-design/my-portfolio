@@ -43,8 +43,8 @@ export default function Contact() {
             </li>
           </ul>
 
-          <Button href={site.resume} variant="ghost" download>
-            Download resume
+          <Button href={site.resume} variant="ghost" target="_blank" rel="noopener noreferrer">
+            View resume
           </Button>
 
           <nav className="contact__socials" aria-label="Social links">

@@ -1,0 +1,26 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="45" x2="730" y2="950" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1B4B"/>
+      <stop offset="0.5" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="250" y1="160" x2="620" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" rx="40" fill="url(#bg)"/>
+  <circle cx="400" cy="330" r="245" fill="url(#glow)" opacity="0.18"/>
+  <circle cx="400" cy="330" r="185" fill="url(#glow)" opacity="0.12"/>
+
+  <path d="M260 770C285 660 332 610 400 610C468 610 515 660 540 770V840H260V770Z" fill="#E2E8F0" opacity="0.92"/>
+  <circle cx="400" cy="365" r="126" fill="#E2E8F0" opacity="0.92"/>
+  <circle cx="400" cy="292" r="138" fill="#F8FAFC" opacity="0.12"/>
+
+  <path d="M338 310C338 270.177 370.177 238 410 238H429C468.823 238 501 270.177 501 310V350C501 389.823 468.823 422 429 422H410C370.177 422 338 389.823 338 350V310Z" fill="#F8FAFC" opacity="0.12"/>
+
+  <text x="400" y="760" text-anchor="middle" fill="#F8FAFC" font-size="210" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="8">MK</text>
+</svg>

@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className="about section" id="about">
       <div className="container">
-        <SectionTitle kicker="Profile">About me</SectionTitle>
+        <SectionTitle>About me</SectionTitle>
 
         <div className="about__inner">
           <ProfileCard />

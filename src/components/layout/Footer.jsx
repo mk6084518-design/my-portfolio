@@ -8,6 +8,11 @@ export default function Footer() {
           © {new Date().getFullYear()} {site.name}. Built with React, Vite, and GSAP.
         </p>
         <ul className="footer__links">
+          <li>
+            <a href={site.resume} target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </li>
           {site.socials.map((s) => (
             <li key={s.label}>
               <a href={s.href} target="_blank" rel="noopener noreferrer">
