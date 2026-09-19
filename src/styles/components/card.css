@@ -79,10 +79,47 @@
   font-size: var(--step--1);
   padding-top: 0.5rem;
 }
-.card__links a {
+.card__link {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  gap: 0.45rem;
   color: var(--accent, var(--cyan));
   border-bottom: 1px solid transparent;
+  transition: color 180ms ease, transform 180ms ease, border-color 180ms ease;
 }
-.card__links a:hover {
+.card__link svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+.card__link:hover {
   border-bottom-color: currentColor;
+  transform: translateY(-2px);
+}
+.card__link--live {
+  font-weight: 600;
+}
+.card__link-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--lime) 55%, transparent);
+  animation: live-pulse 1.8s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  70% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__link-pulse {
+    animation: none;
+  }
 }
