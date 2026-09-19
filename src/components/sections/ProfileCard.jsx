@@ -3,7 +3,7 @@ import { gsap, useGSAP } from "../../lib/gsap.js";
 import { site } from "../../data/site.js";
 
 /**
- * Profile image section. Image na mile to initials wala gradient fallback dikhta hai,
+ * Profile image section. If the image is unavailable, a gradient fallback with initials appears,
  * isliye site kabhi tooti hui nahi lagegi.
  */
 export default function ProfileCard() {

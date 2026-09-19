@@ -1,1 +1,1 @@
-Apni photo yahan rakho aur naam 'profile.jpg' rakho (ya src/data/site.js me path badal do).
+Place your photo here and name it 'profile.jpg' (or update the path in src/data/site.js).

@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <p>
-          © {new Date().getFullYear()} {site.name}. React, Vite aur GSAP se bani.
+          © {new Date().getFullYear()} {site.name}. Built with React, Vite, and GSAP.
         </p>
         <ul className="footer__links">
           {site.socials.map((s) => (

@@ -2,8 +2,8 @@ import { useRef } from "react";
 import { gsap, useGSAP } from "../../lib/gsap.js";
 
 /**
- * Kisi bhi content ko <Reveal> me wrap karo — scroll par reveal ho jayega.
- * stagger={true} ho to direct children ek ke baad ek aate hain.
+ * Wrap any content in <Reveal> to reveal it on scroll.
+ * When stagger={true}, direct children appear one after another.
  */
 export default function Reveal({ children, stagger = false, as: Tag = "div", ...rest }) {
   const ref = useRef(null);

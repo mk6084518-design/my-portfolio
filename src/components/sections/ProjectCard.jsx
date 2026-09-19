@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
     { scope: ref }
   );
 
-  // Hover glow pointer ko follow karta hai
+  // Make the hover glow follow the pointer.
   const onMove = (e) => {
     const r = ref.current.getBoundingClientRect();
     ref.current.style.setProperty("--mx", `${e.clientX - r.left}px`);

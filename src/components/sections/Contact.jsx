@@ -26,7 +26,7 @@ export default function Contact() {
       <div className="container contact__inner">
         <Reveal className="contact__intro" stagger>
           <h2 className="contact__title">Let's build something.</h2>
-          <p>Internship, freelance ya full-time — koi bhi baat ho, message kar do.</p>
+          <p>Whether you have an internship, freelance, or full-time opportunity, I would love to hear from you.</p>
 
           <ul className="contact__details">
             <li>

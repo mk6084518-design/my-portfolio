@@ -11,7 +11,7 @@
   isolation: isolate;
 }
 
-/* Accent stripe — har card ka colour --accent se aata hai */
+/* The accent stripe uses each card's --accent color. */
 .card::before {
   content: "";
   position: absolute;

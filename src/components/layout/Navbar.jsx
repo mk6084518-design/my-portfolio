@@ -20,7 +20,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Menu khula ho to background scroll band
+  // Prevent background scrolling while the mobile menu is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);

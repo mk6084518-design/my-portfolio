@@ -16,15 +16,15 @@ npm run preview
 ```
 public/
   favicon.svg
-  images/profile.jpg          <- apni photo
+  images/profile.jpg          <- profile photo
   resume/Manoj_Kumar_Resume.pdf
 src/
-  data/                       <- SAARA CONTENT YAHAN
+  data/                       <- all content lives here
     site.js                   name, role, contact, stats, nav
     projects.js               projects
     skills.js                 skill groups, strengths, languages
     education.js              education
-  lib/gsap.js                 plugins ek hi jagah register
+  lib/gsap.js                 plugins registered in one place
   hooks/
     useLenis.js               smooth scroll (GSAP ticker se synced)
     useTheme.js               dark/light + localStorage
@@ -39,15 +39,15 @@ src/
     base/                     tokens, reset, typography
     components/               preloader, cursor, navbar, button, card, chip
     sections/                 hero, about, skills, projects, education, contact, footer
-    main.css                  sirf @import
+    main.css                  imports only
   App.jsx, main.jsx
 ```
 
 ## Sections
 
-Hero (animated headline + counters) → About + profile image card → Technical skills → Projects → Education → Contact form + details → Footer.
+Hero (animated headline + counters) → About + profile image card → Technical skills → Projects → Education → Contact details → Footer.
 
-## Content kaise badle
+## How to update content
 
 | Kya | Kahan |
 | --- | --- |
@@ -58,14 +58,14 @@ Hero (animated headline + counters) → About + profile image card → Technical
 | Colours, fonts, spacing | `src/styles/base/tokens.css` |
 | Profile photo | `public/images/profile.jpg` |
 | Resume PDF | `public/resume/Manoj_Kumar_Resume.pdf` |
-| Contact form endpoint | `src/components/sections/Contact.jsx` → `FORM_ENDPOINT` |
+| Social links | `src/data/site.js` → `socials` |
 
-Photo na ho to ProfileCard apne aap initials wala gradient fallback dikha deta hai.
+If the profile photo is missing, ProfileCard automatically displays a gradient fallback with initials.
 
 ## Reusable pieces
 
-- `<Reveal>` — kisi bhi content ko wrap karo, scroll par reveal ho jayega. `stagger` prop se children ek ke baad ek.
-- `<Magnetic>` — pointer ki taraf khinchne wala wrapper (touch par apne aap off).
+- `<Reveal>` — wrap any content to reveal it on scroll. Use the `stagger` prop to animate children one after another.
+- `<Magnetic>` — a pointer-following wrapper that automatically disables on touch devices.
 - `<Counter value={12} />` — scroll par number count-up.
 - `<Button href="#projects">` — hash links Lenis se smooth scroll karte hain.
 

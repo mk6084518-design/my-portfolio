@@ -4,7 +4,7 @@ import { site } from "../../data/site.js";
 import Button from "../ui/Button.jsx";
 import Counter from "../ui/Counter.jsx";
 
-/** Headline ko word-by-word mask reveal ke liye split karta hai. */
+/** Splits the headline into words for the masked reveal animation. */
 function SplitHeadline({ text }) {
   return (
     <h1 className="hero__title">
@@ -33,7 +33,7 @@ export default function Hero({ start }) {
         .from(".hero__stats > div", { y: 20, opacity: 0, stagger: 0.08 }, "-=0.45")
         .from(".hero__blob", { scale: 0.4, opacity: 0, duration: 1.6, stagger: 0.15 }, 0);
 
-      // Scroll parallax
+      // Scroll parallax.
       gsap.to(".hero__blob--one", {
         yPercent: 35,
         ease: "none",

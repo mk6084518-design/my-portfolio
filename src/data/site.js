@@ -1,4 +1,4 @@
-/** Ek jagah se poori site ki identity. */
+/** Centralized site identity and content. */
 export const site = {
   name: "Manoj Kumar",
   role: "Full Stack Developer",
@@ -6,10 +6,10 @@ export const site = {
   available: true,
   headline: "Full stack developer building responsive MERN apps with AI inside.",
   summary:
-    "React.js, Redux Toolkit, Tailwind CSS, Node.js, Express.js aur MongoDB par kaam karta hoon. Dynamic web platforms banata hoon aur unme AI models aur third-party APIs integrate karta hoon.",
+    "I work with React.js, Redux Toolkit, Tailwind CSS, Node.js, Express.js, and MongoDB to build dynamic web platforms with integrated AI models and third-party APIs.",
   about: [
-    "Main frontend architecture, global state management aur secure authentication workflows par focus karta hoon — JWT based auth, MVC pattern aur REST APIs ke saath.",
-    "Google Gemini jaise AI models ko product ke andar useful banana mujhe sabse interesting lagta hai: sirf API call nahi, balki user ko asli output dene wala flow design karna.",
+    "I focus on frontend architecture, global state management, and secure authentication workflows using JWT-based authentication, MVC patterns, and REST APIs.",
+    "I enjoy turning AI models such as Google Gemini into useful product experiences by designing flows that deliver meaningful results, not just API responses.",
   ],
   profileImage: "/images/profile.jpg",
   resume: "/resume/Manoj_Kumar_Resume.pdf",

@@ -21,7 +21,7 @@ export function useLenis() {
     lenisInstance = lenis;
     ref.current = lenis;
 
-    // Lenis ko GSAP ticker par chalao — warna do RAF loops se jitter aata hai.
+    // Run Lenis on the GSAP ticker to avoid competing RAF loops.
     lenis.on("scroll", ScrollTrigger.update);
     const raf = (time) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);

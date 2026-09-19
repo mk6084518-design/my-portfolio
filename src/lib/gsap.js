@@ -1,4 +1,4 @@
-/** GSAP ka single source of truth — plugins sirf yahan register hote hain. */
+/** GSAP's single source of truth; plugins are registered here. */
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
