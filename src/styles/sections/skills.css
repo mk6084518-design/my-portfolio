@@ -16,3 +16,9 @@
   font-size: var(--step-1);
   margin-bottom: 0.9rem;
 }
+
+@media (max-width: 520px) {
+  .skill-group {
+    padding: 1.2rem;
+  }
+}

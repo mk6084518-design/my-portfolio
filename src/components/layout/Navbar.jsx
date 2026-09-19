@@ -5,11 +5,16 @@ import { scrollToSection } from "../../hooks/useLenis.js";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
   const { theme, toggle } = useTheme();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      setScrolled(window.scrollY > 40);
+      setProgress(scrollable > 0 ? window.scrollY / scrollable : 0);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -28,6 +33,7 @@ export default function Navbar() {
 
   return (
     <header className={`navbar${scrolled ? " is-scrolled" : ""}`}>
+      <span className="navbar__progress" style={{ transform: `scaleX(${progress})` }} />
       <a className="navbar__logo" href="#hero" onClick={(e) => go(e, "#hero")}>
         MK<span>.</span>
       </a>

@@ -12,14 +12,15 @@ export default function Reveal({ children, stagger = false, as: Tag = "div", ...
     () => {
       const targets = stagger ? ref.current.children : ref.current;
       gsap.from(targets, {
-        y: 44,
+        y: 32,
         opacity: 0,
-        duration: 0.85,
+        duration: 0.75,
         stagger: stagger ? 0.09 : 0,
         scrollTrigger: {
           trigger: ref.current,
           start: "top 88%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
+          once: true,
         },
       });
     },

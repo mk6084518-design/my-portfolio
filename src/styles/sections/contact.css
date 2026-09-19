@@ -40,6 +40,36 @@
   color: var(--cyan);
 }
 
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: var(--step--1);
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.contact__social svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.contact__social:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
 .contact__form {
   display: grid;
   gap: 1rem;
@@ -77,4 +107,14 @@
 }
 .contact__status[data-state="success"] {
   color: var(--lime);
+}
+
+@media (max-width: 520px) {
+  .contact__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .contact__form {
+    padding: 1.1rem;
+  }
 }

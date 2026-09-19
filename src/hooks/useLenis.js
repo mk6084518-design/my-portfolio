@@ -12,7 +12,12 @@ export function useLenis() {
   useEffect(() => {
     if (reduced) return;
 
-    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    const lenis = new Lenis({
+      duration: 1.15,
+      smoothWheel: true,
+      syncTouch: true,
+      autoRaf: false,
+    });
     lenisInstance = lenis;
     ref.current = lenis;
 
@@ -22,7 +27,14 @@ export function useLenis() {
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
+    const onResize = () => {
+      lenis.resize();
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("resize", onResize, { passive: true });
+
     return () => {
+      window.removeEventListener("resize", onResize);
       gsap.ticker.remove(raf);
       lenis.destroy();
       lenisInstance = null;
