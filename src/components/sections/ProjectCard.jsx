@@ -50,12 +50,16 @@ export default function ProjectCard({ project }) {
       </ul>
 
       <div className="card__links">
-        <a href={project.live} target="_blank" rel="noopener noreferrer">
-          Live demo
-        </a>
-        <a href={project.repo} target="_blank" rel="noopener noreferrer">
-          Source code
-        </a>
+        {project.live && project.live !== "#" && (
+          <a href={project.live} target="_blank" rel="noopener noreferrer">
+            Live demo
+          </a>
+        )}
+        {project.repo && project.repo !== "#" && (
+          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            Source code
+          </a>
+        )}
       </div>
     </article>
   );
