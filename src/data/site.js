@@ -12,7 +12,7 @@ export const site = {
     "I enjoy turning AI models such as Google Gemini into useful product experiences by designing flows that deliver meaningful results, not just API responses.",
   ],
   profileImage: "/images/my-photo.jpg",
-  resume: "https://drive.google.com/file/d/15mcKPrlp8RJAO8KVNR5lcO3PSzXAhTlt/view?usp=drive_link",
+  resume: "/resume/my-resume.pdf",
   email: "mk6084518@gmail.com",
   phone: "+91 8006457447",
   socials: [
