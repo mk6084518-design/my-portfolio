@@ -1,82 +1,155 @@
-# Manoj Kumar — Portfolio (React + Vite + GSAP)
+<div align="center">
 
-Responsive personal portfolio. React 18, Vite, GSAP + ScrollTrigger, Lenis smooth scroll, dark/light theme, fully data-driven content.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=My%20Portfolio&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20MERN%20%2B%20AI&descAlignY=58&descSize=20" width="100%"/>
 
-## Run locally
+<p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2500&pause=800&color=8A2BE2&center=true&vCenter=true&multiline=true&repeat=true&width=650&height=60&lines=Hi%2C+I'm+Manoj+Kumar;Full+Stack+MERN+%2B+AI+Developer;Building+Web+Platforms+Powered+by+AI" alt="Typing SVG" />
+</p>
+
+<p>
+  <a href="https://my-portfolio-xttc.onrender.com">
+    <img src="https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Site-8A2BE2?style=for-the-badge&logo=render&logoColor=white" />
+  </a>
+  <a href="https://github.com/mk6084518-design">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
+</p>
+
+</div>
+
+<br/>
+
+## 🌟 About This Portfolio
+
+This is my personal **developer portfolio** — a fully responsive, animated showcase of who I am, what I build, and the projects I've shipped. Designed to be fast, modern, and memorable, with smooth **GSAP-powered animations** and a clean, dark, multi-coloured aesthetic.
+
+<br/>
+
+## ✨ Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Animated UI
+Smooth scroll-triggered animations and transitions built with **GSAP**, giving the site a polished, premium feel.
+
+</td>
+<td width="50%">
+
+### 📱 Fully Responsive
+Optimized layout across desktop, tablet, and mobile — clean UX on every screen size.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🚀 Project Showcase
+Dedicated sections highlighting featured builds — including AI-powered platforms like the **AI Resume Analyzer** and **Interest** media search app.
+
+</td>
+<td width="50%">
+
+### ⚡ Fast & Lightweight
+Built with performance in mind — quick load times and smooth navigation throughout.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Layer | Technologies |
+|---|---|
+| **Frontend** | React.js, Redux Toolkit |
+| **Styling / Animation** | GSAP, CSS3 |
+| **Backend** *(if applicable)* | Node.js, Express.js |
+| **Database** *(if applicable)* | MongoDB |
+| **Deployment** | Render |
+
+</div>
+
+<br/>
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js installed
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/mk6084518-design/my-portfolio.git
+cd my-portfolio
+
+# Install dependencies
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # dist/
-npm run preview
 ```
 
-## Structure
+### Run Locally
 
-```
-public/
-  favicon.svg
-  images/profile.jpg          <- profile photo
-  resume/Manoj_Kumar_Resume.pdf
-src/
-  data/                       <- all content lives here
-    site.js                   name, role, contact, stats, nav
-    projects.js               projects
-    skills.js                 skill groups, strengths, languages
-    education.js              education
-  lib/gsap.js                 plugins registered in one place
-  hooks/
-    useLenis.js               smooth scroll (GSAP ticker se synced)
-    useTheme.js               dark/light + localStorage
-    useMediaQuery.js
-    usePrefersReducedMotion.js
-  components/
-    layout/                   Preloader, Cursor, Navbar, Footer
-    ui/                       Button, Magnetic, Reveal, SectionTitle, Counter
-    sections/                 Hero, About, ProfileCard, Skills,
-                              Projects, ProjectCard, Education, Contact
-  styles/
-    base/                     tokens, reset, typography
-    components/               preloader, cursor, navbar, button, card, chip
-    sections/                 hero, about, skills, projects, education, contact, footer
-    main.css                  imports only
-  App.jsx, main.jsx
+```bash
+npm run dev
 ```
 
-## Sections
+App will run at `http://localhost:5173` (or your configured port).
 
-Hero (animated headline + counters) → About + profile image card → Technical skills → Projects → Education → Contact details → Footer.
+<br/>
 
-## How to update content
+## 🔗 Live Site
 
-| Kya | Kahan |
-| --- | --- |
-| Naam, role, summary, contact, stats | `src/data/site.js` |
-| Projects | `src/data/projects.js` |
-| Skills, strengths, languages | `src/data/skills.js` |
-| Education | `src/data/education.js` |
-| Colours, fonts, spacing | `src/styles/base/tokens.css` |
-| Profile photo | `public/images/profile.jpg` |
-| Resume PDF | `public/resume/Manoj_Kumar_Resume.pdf` |
-| Social links | `src/data/site.js` → `socials` |
+<div align="center">
 
-If the profile photo is missing, ProfileCard automatically displays a gradient fallback with initials.
+### 👉 [**my-portfolio-xttc.onrender.com**](https://my-portfolio-xttc.onrender.com) 👈
 
-## Reusable pieces
+</div>
 
-- `<Reveal>` — wrap any content to reveal it on scroll. Use the `stagger` prop to animate children one after another.
-- `<Magnetic>` — a pointer-following wrapper that automatically disables on touch devices.
-- `<Counter value={12} />` — scroll par number count-up.
-- `<Button href="#projects">` — hash links Lenis se smooth scroll karte hain.
+<br/>
 
-## Responsive
+## 🗂️ Featured Projects Linked Here
 
-Fluid type scale (`clamp()`), auto-fit grids, hamburger nav 820px se neeche, profile card 860px par upar aa jata hai, buttons 420px par full width, blobs mobile par halke. Touch devices par custom cursor aur magnetic effect disable.
+- 🧠 **AI Resume Analyzer** — AI-powered resume feedback & interview prep using Google Gemini
+- 🔎 **Interest** — Real-time media search across Unsplash, Pexels & Tenor
 
-`prefers-reduced-motion` respect hota hai — preloader skip, animations off, content turant visible.
+<br/>
 
-## Deploy
+## 🤝 Contributing
 
-**Vercel:** repo import → framework Vite → build `npm run build` → output `dist`.
-**GitHub Pages:** `vite.config.js` me `base: "/Portfolio/"` set karke `dist/` ko `gh-pages` branch par push karo.
-# my-portfolio
+This is a personal portfolio, but suggestions and feedback are always welcome!
+Feel free to open an [issue](../../issues) or reach out.
+
+<br/>
+
+## 👤 Author
+
+<div align="center">
+
+**Manoj Kumar**
+*Full Stack Developer (MERN) · AI Enthusiast · B.Tech CSE*
+
+<a href="https://github.com/mk6084518-design">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
+
+</div>
