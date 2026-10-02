@@ -1,4 +1,3 @@
-/** Add new projects here without changing the component. */
 export const projects = [
   {
     id: "ai-resume-analyzer",
@@ -23,6 +22,7 @@ export const projects = [
     accent: "var(--violet)",
     featured: true,
   },
+
   {
     id: "interest-media-search",
     title: "Interest — Media Search Platform",
@@ -32,10 +32,43 @@ export const projects = [
       "Real-time results and dynamic media retrieval powered by the Unsplash, Pexels, and Tenor APIs.",
       "Reusable React components with category-based rendering.",
     ],
-    tags: ["React.js", "Redux Toolkit", "Vite", "Unsplash API", "Pexels API", "Tenor API"],
+    tags: [
+      "React.js",
+      "Redux Toolkit",
+      "Vite",
+      "Unsplash API",
+      "Pexels API",
+      "Tenor API",
+    ],
     live: "https://interest-i3s1.onrender.com",
     repo: "https://github.com/mk6084518-design/Interest.git",
     accent: "var(--cyan)",
     featured: false,
+  },
+
+  {
+    id: "reelsspace",
+    title: "ReelsSpace — Short Video & Media Sharing Platform",
+    tagline: "An Instagram-inspired full-stack platform for uploading, streaming, and discovering short reels.",
+    points: [
+      "Built a full-stack short video sharing platform enabling users to upload, stream, and discover reels seamlessly.",
+      "Implemented secure user authentication and token-based session authorization using JSON Web Tokens (JWT).",
+      "Integrated ImageKit API for cloud media storage, video processing, and fast media delivery.",
+      "Architected scalable state management with Redux Toolkit for video feeds, user profiles, and engagement data.",
+    ],
+    tags: [
+      "React.js",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "ImageKit API",
+      "REST APIs",
+    ],
+    live: "https://reelsspace-1.onrender.com/",
+    repo: "https://github.com/mk6084518-design/ReelsSpace.git",
+    accent: "var(--pink)",
+    featured: true,
   },
 ];
