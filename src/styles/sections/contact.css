@@ -1,0 +1,77 @@
+.contact {
+  background:
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--violet) 22%, transparent), transparent 45%),
+    radial-gradient(circle at 88% 100%, color-mix(in srgb, var(--pink) 18%, transparent), transparent 45%);
+}
+
+.contact__inner {
+  display: block;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.contact__intro {
+  min-height: 22rem;
+  align-content: center;
+  align-items: start;
+}
+
+.contact__intro {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.contact__title {
+  font-size: var(--step-2);
+}
+
+.contact__details {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+}
+.contact__details li {
+  display: grid;
+  gap: 0.1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+.contact__details span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.contact__details a:hover {
+  color: var(--cyan);
+}
+
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: var(--step--1);
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.contact__social svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.contact__social:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+

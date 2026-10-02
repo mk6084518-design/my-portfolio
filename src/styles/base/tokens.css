@@ -1,0 +1,46 @@
+:root {
+  --bg: #e8f4f1;
+  --surface: #f5fbf8;
+  --surface-2: #d4e7e3;
+  --line: rgba(10, 22, 28, 0.14);
+
+  --text: #10151d;
+  --muted: #52616a;
+
+  --violet: #0a2529;
+  --cyan: #18c7b1;
+  --pink: #ef725f;
+  --amber: #f6b84b;
+  --lime: #18c7b1;
+
+  --grad-primary: linear-gradient(135deg, var(--violet), var(--cyan));
+  --grad-accent: linear-gradient(135deg, var(--pink), var(--amber));
+  --glow: 0 0 70px -18px var(--violet);
+
+  --font-display: "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, sans-serif;
+
+  /* Fluid type scale — har screen par apne aap adjust */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.6rem);
+  --step-2: clamp(1.8rem, 1.5rem + 1.4vw, 2.8rem);
+  --step-3: clamp(2.3rem, 1.6rem + 3.6vw, 5rem);
+
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: clamp(3.5rem, 9vw, 8rem);
+  --radius: 18px;
+  --radius-sm: 10px;
+  --container: 1140px;
+}
+
+[data-theme="light"] {
+  --bg: #f6f5fb;
+  --surface: #ffffff;
+  --surface-2: #eeecf8;
+  --line: rgba(12, 12, 22, 0.1);
+  --text: #12121a;
+  --muted: #55556d;
+  --glow: 0 0 70px -18px rgba(124, 58, 237, 0.45);
+}

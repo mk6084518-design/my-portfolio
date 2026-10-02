@@ -1,0 +1,148 @@
+.skill-matrix__panel {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  text-align: center;
+  overflow: hidden;
+}
+
+.skill-matrix__chart {
+  width: min(100%, 560px);
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.skill-matrix__grid {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.skill-matrix__spoke {
+  stroke: var(--line);
+  stroke-width: 1;
+  transition: stroke 180ms ease, stroke-width 180ms ease;
+}
+
+.skill-matrix__label {
+  fill: var(--text);
+  font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  cursor: pointer;
+  outline: none;
+  transition: fill 180ms ease, font-size 180ms ease;
+}
+
+.skill-matrix__label.is-active,
+.skill-matrix__label:hover,
+.skill-matrix__label:focus-visible {
+  fill: var(--cyan);
+  font-size: 13px;
+}
+
+.skill-matrix__area {
+  fill: color-mix(in srgb, var(--violet) 24%, transparent);
+  stroke: var(--violet);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: skill-matrix-draw 1.4s ease forwards;
+  pointer-events: none;
+}
+
+.skill-matrix__hit {
+  cursor: pointer;
+  outline: none;
+}
+
+.skill-matrix__hit-area {
+  fill: transparent;
+}
+
+.skill-matrix__dot,
+.skill-matrix__ring,
+.skill-matrix__value-dot {
+  fill: var(--node-color);
+}
+
+.skill-matrix__value-dot { pointer-events: none; }
+
+.skill-matrix__dot {
+  transition: transform 200ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.skill-matrix__ring {
+  fill: none;
+  stroke: var(--node-color);
+  stroke-width: 2;
+  opacity: 0;
+}
+
+.skill-matrix__node.is-active .skill-matrix__dot {
+  transform: scale(1.7);
+}
+
+.skill-matrix__node.is-active .skill-matrix__ring {
+  animation: skill-matrix-pulse 1.1s ease-out infinite;
+}
+
+.skill-matrix__hit:focus-visible .skill-matrix__dot {
+  stroke: var(--text);
+  stroke-width: 2;
+}
+
+.skill-matrix__score-track,
+.skill-matrix__score-progress {
+  fill: none;
+}
+
+.skill-matrix__score-track {
+  stroke: var(--line);
+  stroke-width: 3;
+}
+
+.skill-matrix__score-progress {
+  stroke: var(--score-color);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dasharray 350ms ease, stroke 250ms ease;
+}
+
+.skill-matrix__center-label {
+  fill: var(--text);
+  font: 700 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.skill-matrix__center-name {
+  fill: var(--muted);
+  font: 500 8px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@keyframes skill-matrix-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes skill-matrix-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.7); opacity: 0; }
+}
+
+@media (max-width: 520px) {
+  .skill-matrix__panel { padding: 0.25rem; }
+  .skill-matrix__label { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-matrix__area { animation: none; stroke-dashoffset: 0; }
+  .skill-matrix__dot,
+  .skill-matrix__spoke,
+  .skill-matrix__score-progress { transition: none; }
+  .skill-matrix__ring { animation: none !important; }
+}
